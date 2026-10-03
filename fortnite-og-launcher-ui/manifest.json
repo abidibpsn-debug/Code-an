@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "RIFT / OG Launcher",
+  "version": "1.0.0",
+  "description": "A community launcher-inspired home for Fortnite OG Season 3.",
+  "action": { "default_popup": "index.html" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": []
+}
